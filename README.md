@@ -2,8 +2,6 @@
 
 Public-friendly scripts for a CRISPR screen analysis workflow using MAGeCK, BEstimate, MuSA variant annotations, Python, and R.
 
-This repository contains code only. Raw sequencing data, large intermediate files, cluster logs, and generated plots/results should not be committed.
-
 ## Workflow overview
 
 1. `01_concatenate_fastq_lanes.sh`  
@@ -152,10 +150,3 @@ OUT_DIR=/path/to/project/analysis/mageck_test_trim_22/volcano_plots_NF1_only \
 TARGET_GENE=NF1 \
 bash 05_plot_mageck_sgrna_volcano.sh
 ```
-
-## Notes for public release
-
-- Do not commit FASTQ/BAM/VCF files or other large sequencing outputs.
-- Do not commit SLURM `.out`/`.err` logs.
-- Keep local HPC paths outside the code by passing them through environment variables.
-- Start with a private repository if you are unsure whether sample metadata can be public, then switch to public after review.
